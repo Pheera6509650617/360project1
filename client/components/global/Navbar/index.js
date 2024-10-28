@@ -22,12 +22,6 @@ const Navigation = ({ navigation, pageData, type }) => {
           </a>
         </Link>
 
-        <Link href="/restaurants">
-          <a type="button" className="rotate-45 ml-10 mr-10">
-            restaurant
-          </a>
-        </Link>
-
         <Link href="/All_restaurants">
           <a type="button" className="rotate-45 ml-10 mr-10">
             All restaurants
