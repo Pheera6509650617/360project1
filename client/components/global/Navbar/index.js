@@ -28,6 +28,12 @@ const Navigation = ({ navigation, pageData, type }) => {
           </a>
         </Link>
 
+        <Link href="/profile">
+          <a type="button" className="rotate-45 ml-10 mr-10">
+            Profile
+          </a>
+        </Link>
+
         <Link href="/Login">
           <a type="button" className="py-4 px-6 bg-primary hover:bg-primary-darker text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded-full hidden lg:block">
             Login

@@ -2,12 +2,20 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Layout from "../../components/layout";
 import Link from "next/link"
+import { useRouter } from "next/router";
 
 function All_restaurants({ global, pageData, preview }) {
+    const router = useRouter();
     const[data, setData] = useState(null);
     const[error, setError] = useState(null);
 
     useEffect(() => {
+        const token = localStorage.getItem('token');
+        if(!token) {
+            router.push('Login');
+            return;
+        }
+
         fetch('http://localhost:1337/api/restaurants')
         .then((response) => {
             if (!response.ok) {

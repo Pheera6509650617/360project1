@@ -1,7 +1,8 @@
+import Layout from '../../components/layout';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
-const Profile = () => {
+const Profile = ({ global, pageData, preview }) => {
   const [user, setUser] = useState(null);
   const router = useRouter();
 
@@ -39,11 +40,18 @@ const Profile = () => {
   if (!user) return <p>Loading...</p>;
 
   return (
-    <div>
-      <h1>Welcome, {user.username}</h1>
-      <p>Email: {user.email}</p>
-      <button onClick={Logout} className="ring-2 ring-black bg-slate-800 text-white">Logout</button>
-    </div>
+    <Layout
+      global={global}
+      type="restaurant-page"
+      pageData={pageData}
+      preview={preview}
+    >
+      <div className="ml-10">
+        <h1>Welcome, {user.username}</h1>
+        <p>Email: {user.email}</p>
+        <button onClick={Logout} className="ring-2 ring-black bg-slate-800 text-white">Logout</button>
+      </div>
+    </Layout>
   );
 };
 
