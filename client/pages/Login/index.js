@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../../components/layout';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 const Login = ({ global, pageData, preview }) => {
@@ -9,6 +9,14 @@ const Login = ({ global, pageData, preview }) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const router = useRouter();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      router.push('/profile')
+      return;
+    }
+  })
   
   const Submit = async (e) => {
     e.preventDefault();
