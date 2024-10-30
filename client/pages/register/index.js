@@ -40,13 +40,13 @@ const Register = ({ global, pageData, preview }) => {
     >
         <h1>Register</h1>
         <form onSubmit={Submit} className="rounded-lg border-4 border-black border-double shadow-2xl">
-            <label for="usename">Username:</label><br></br>
+            <label htmlFor="usename">Username:</label><br></br>
             <input type="text" placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)} className="border-solid border-2 border-black"></input><br></br>
-            <label for="email">Email:</label><br></br>
+            <label htmlFor="email">Email:</label><br></br>
             <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="border-solid border-2 border-black"></input><br></br>
-            <label for="password">Password:</label><br></br>
+            <label htmlFor="password">Password:</label><br></br>
             <input type="text" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} className="border-solid border-2 border-black"></input><br></br>
-            <label for="job">Job:</label><br></br>
+            <label htmlFor="job">Job:</label><br></br>
             <input type="text" placeholder='Job' value={job} onChange={(e) => setJob(e.target.value)} className="border-solid border-2 border-black"></input><br></br>
             <button type="submit" className="ring-2 ring-black bg-slate-800 text-white">Register</button>
         </form>

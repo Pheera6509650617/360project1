@@ -48,9 +48,9 @@ const Login = ({ global, pageData, preview }) => {
     >
         <h1>LOGIN</h1>
         <form onSubmit={Submit} className="rounded-lg border-4 border-black border-double shadow-2xl">
-            <label for="email">Email:</label><br></br>
+            <label htmlFor="email">Email:</label><br></br>
             <input type="text" placeholder="Email" value={identifier} onChange={(e) => setIdentifier(e.target.value)} className="border-solid border-2 border-black"></input><br></br>
-            <label for="password">Password:</label><br></br>
+            <label htmlFor="password">Password:</label><br></br>
             <input type="text" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} className="border-solid border-2 border-black"></input><br></br>
             <button type="submit" className="ring-2 ring-black bg-slate-800 text-white">Login</button>
             <Link href="/register">
