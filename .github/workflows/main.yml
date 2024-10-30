@@ -19,7 +19,7 @@ jobs:
           ls ${{ github.workspace }}
       
       - run: npm install -g yarn
-      - run: cd client/ 
+      - run: cd client
       - run: npm install
       - run: npm install -D @testing-library/react@12 jest jest-environment-jsdom @testing-library/dom @testing-library/jest-dom ts-node supertest
       - run: npm install --save-dev babel-jest @babel/preset-env
