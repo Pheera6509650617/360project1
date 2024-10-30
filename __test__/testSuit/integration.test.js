@@ -62,7 +62,7 @@ describe('Login API Test', () => {
     expect(res.body.error.message).toBe("Email or Username are already taken");
   });
 
-  afterAll(async () => {
+  /*afterAll(async () => {
     if(userID) {
         const res = await request('http://localhost:1337')
         .delete(`/api/users/${userID}`)
@@ -71,7 +71,7 @@ describe('Login API Test', () => {
         // ตรวจสอบสถานะการตอบกลับ
         expect(res.statusCode).toBe(200);
     }
-  });
+  });*/
 
   it('should error if Register with wrong EMAIL format', async () => {
     const res = await request('http://localhost:1337')
