@@ -19,11 +19,14 @@ jobs:
           ls ${{ github.workspace }}
       
       - run: npm install -g yarn
-      - run: cd client
-      - run: npm install
-      - run: npm install -D @testing-library/react@12 jest jest-environment-jsdom @testing-library/dom @testing-library/jest-dom ts-node supertest
-      - run: npm install --save-dev babel-jest @babel/preset-env
-      - run: npm install jest-fetch-mock --save-dev
-      - run: cd __test__
-      - run: npm test
+      - name: Download dependencies
+        working-directory: ./client
+        run: |
+          npm install
+          npm install -D @testing-library/react@12 jest jest-environment-jsdom @testing-library/dom @testing-library/jest-dom ts-node supertest
+          npm install --save-dev babel-jest @babel/preset-env
+          npm install jest-fetch-mock --save-dev
+      - name: run test
+        working-directory: ./client/__test__
+        run: npm test
       - run: echo "🍏 This job's status is ${{ job.status }}."
