@@ -25,7 +25,7 @@ const Register = ({ global, pageData, preview }) => {
     const data = await res.json();
 
     if(res.ok) {
-      router.push('/profile');
+      router.push('/Login');
     } else {
       setError(data.error.message);
     }
@@ -38,7 +38,7 @@ const Register = ({ global, pageData, preview }) => {
       pageData={pageData}
       preview={preview}
     >
-        <h1>Register</h1>
+        <h1>REGISTER</h1>
         <form onSubmit={Submit} className="rounded-lg border-4 border-black border-double shadow-2xl">
             <label htmlFor="usename">Username:</label><br></br>
             <input type="text" placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)} className="border-solid border-2 border-black"></input><br></br>

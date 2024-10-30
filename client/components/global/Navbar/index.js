@@ -36,7 +36,7 @@ const Navigation = ({ navigation, pageData, type }) => {
 
         <Link href="/Login">
           <a type="button" className="py-4 px-6 bg-primary hover:bg-primary-darker text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded-full hidden lg:block">
-            Login
+            LOGIN
           </a>
         </Link>
       </div>
